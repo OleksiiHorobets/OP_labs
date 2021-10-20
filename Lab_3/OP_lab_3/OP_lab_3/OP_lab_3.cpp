@@ -18,16 +18,12 @@ int main()
 	cin >> x;
 
 	double prev_sum = 1, sum = 1;
+	double curr_val = 1;
 	int k = 1;
 	do {
 		prev_sum = sum;
-		double curr_sum = 1;
-
-		for (int i = 0; i < k; i++) {
-			curr_sum *= (a - i) * x / (i + 1);
-		}
-
-		sum += curr_sum;
+		curr_val *= (a - k + 1) * x / k;
+		sum += curr_val;
 		k++;
 		cout << " k = " << k << "\t|  sum = " << setprecision(7) << sum << fixed << endl;
 	} while (abs(sum - prev_sum) > epsilon);
