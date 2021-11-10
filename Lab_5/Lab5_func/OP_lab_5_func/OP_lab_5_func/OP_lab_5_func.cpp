@@ -5,10 +5,11 @@ using namespace std;
 
 bool prime_check(long long num) {
 	bool is_prime = true;
-	for (long long divisor = 2; divisor <= sqrt(num) && is_prime; divisor++) {
-		if (num % divisor == 0) is_prime = false;
+	long long divisor = 2;
+	while (num % divisor != 0 && divisor * divisor <= num) {
+		divisor++;
 	}
-	return is_prime;
+	return divisor * divisor > num;
 }
 
 int main()
