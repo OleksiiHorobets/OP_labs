@@ -1,0 +1,3 @@
+﻿  OP_lab_8.cpp
+c:\Study\OP\Lab_8\OP_lab_8\OP_lab_8\OP_lab_8.cpp(31,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  OP_lab_8.vcxproj -> C:\Study\OP\Lab_8\OP_lab_8\Debug\OP_lab_8.exe
