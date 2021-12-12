@@ -4,7 +4,7 @@ using namespace std;
 
 void strInput(char* , int);
 
-bool uniqueCheck(char*, char, int);
+bool uniqueCheck(char*, int);
 
 int main()
 {
@@ -14,23 +14,25 @@ int main()
     strInput(str, size);
 
     for (int i = 0; str[i]; i++) {
-        if (uniqueCheck(str, str[i], i)) {
+        if (uniqueCheck(str, i)) {
             cout << "Unique char index: " << i << endl;
         }
     }
+   
 }
 
 void strInput(char* str, int size) {
     cin.getline(str, size);
 }
 
-bool uniqueCheck(char* str, char symbol, int index) {
+bool uniqueCheck(char* str, int index) {
     bool isUnique = true;
-    int j = index+1;
+    int j = 0;
     while (isUnique && str[j]) {
-        if (symbol == str[j]) {
+        if (str[index] == str[j] && j != index) {
             isUnique = false;
-        }j++;
+        }
+        j++;
     }
     return isUnique;
 }
